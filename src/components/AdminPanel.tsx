@@ -42,7 +42,7 @@ export function AdminPanel() {
         .from('admin_users')
         .select('password_hash')
         .eq('username', 'admin')
-        .maybeSingle();
+        .single();
 
       if (queryError) throw queryError;
 
