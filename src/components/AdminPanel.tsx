@@ -46,7 +46,7 @@ export function AdminPanel() {
 
       if (queryError) throw queryError;
 
-      if (data && data.password_hash === password) {
+      if (data && data.password_hash.trim() === password.trim()) {
         setIsAuthenticated(true);
         setPassword('');
       } else {
